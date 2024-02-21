@@ -1,12 +1,13 @@
-using Microsoft.EntityFrameworkCore;
-using OnlineShop.Data;
-
 var builder = WebApplication.CreateBuilder(args);
-
-
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("LocalDb")));
+
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+
+
+
 
 var app = builder.Build();
 

@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using OnlineShop.Data.Entities;
-
-namespace OnlineShop.Data;
+﻿namespace OnlineShop.Data;
 public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
