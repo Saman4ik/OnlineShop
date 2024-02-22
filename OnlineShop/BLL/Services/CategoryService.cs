@@ -1,4 +1,7 @@
-﻿namespace OnlineShop.BLL.Services;
+﻿using OnlineShop.BLL.Common;
+using OnlineShop.BLL.DTOs.CategoryDTOs;
+
+namespace OnlineShop.BLL.Services;
 public class CategoryService(IUnitOfWork unitOfWork) : ICategoryService
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
@@ -53,13 +56,15 @@ public class CategoryService(IUnitOfWork unitOfWork) : ICategoryService
         {
             throw new CaustomException("Category not fount");
         }
-        var dto = new CategoryDto();
+
+        var dto = new CategoryDto()
         {
-            
+            Id = category.Id,
+            Name = category.Name
         };
         return dto;
+    }
 
-    } // Xatosi bor 
     public void Update(CategoryDto categoryDto)
     {
         var category = _unitOfWork.Category.GetById(categoryDto.Id);
