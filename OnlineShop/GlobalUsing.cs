@@ -7,3 +7,4 @@ global using OnlineShop.BLL.Common;
 global using OnlineShop.BLL.DTOs.CategoryDTOs;
 global using OnlineShop.BLL.Interfaces;
 global using OnlineShop.BLL.Services;
+global using Microsoft.AspNetCore.Mvc;
