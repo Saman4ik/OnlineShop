@@ -4,7 +4,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("LocalDb")));
 
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
-builder.Services.AddTransient<CategoryService, CategoryService>();
+builder.Services.AddTransient<ICategoryService, CategoryService>();
+
 
 
 
