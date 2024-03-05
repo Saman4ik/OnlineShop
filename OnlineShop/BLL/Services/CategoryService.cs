@@ -12,7 +12,7 @@ public class CategoryService(IUnitOfWork unitOfWork) : ICategoryService
         {
             throw new CaustomException("CategoryDto was null");
         }
-        if(string.IsNullOrEmpty(categoryDto.Name))
+        if (string.IsNullOrEmpty(categoryDto.Name))
         {
             throw new CaustomException("Category name is null");
         }

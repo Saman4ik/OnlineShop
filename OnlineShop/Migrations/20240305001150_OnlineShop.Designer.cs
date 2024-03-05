@@ -12,8 +12,8 @@ using OnlineShop.Data;
 namespace OnlineShop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240221041910_Test")]
-    partial class Test
+    [Migration("20240305001150_OnlineShop")]
+    partial class OnlineShop
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
