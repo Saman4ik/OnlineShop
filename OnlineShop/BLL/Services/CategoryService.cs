@@ -1,7 +1,4 @@
-﻿using OnlineShop.BLL.Common;
-using OnlineShop.BLL.DTOs.CategoryDTOs;
-
-namespace OnlineShop.BLL.Services;
+﻿namespace OnlineShop.BLL.Services;
 public class CategoryService(IUnitOfWork unitOfWork) : ICategoryService
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
